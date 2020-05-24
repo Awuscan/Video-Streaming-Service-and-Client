@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+    <title>Video stream</title>
+	<style>
+	.container{
+		margin: auto;
+		width: 50%;
+		padding: 10px;
+	}
+	
+	.feed{
+		border: 3px solid black;
+	}
+	</style>
+</head>
+<body>
+	<div class="container">
+			<h3>Video stream</h3>
+			<img class="feed" src="{{ url_for('video') }}" width="100%">
+	</div>
+</body>
+</html>
