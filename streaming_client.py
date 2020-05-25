@@ -9,7 +9,9 @@ def connect(url):
         stream = urllib.request.urlopen(url)
     except:
         sys.exit("Bad address/can't connect")
-        
+    else:
+        print("Connected to: " + url)
+    
     return stream 
 
 def main(url):  
@@ -35,8 +37,8 @@ def main(url):
 
 parser = argparse.ArgumentParser(add_help=False)
 parser.add_argument('-u', action="store", dest="url", default='http://localhost/video', type=str)
-parser.add_argument('-f', action="store", dest="framerate", default=30, type=int)
+parser.add_argument('-f', action="store", dest="framerate", default=30, type=float)
 args = parser.parse_args()
 
 if __name__ == "__main__":
-   main(args.url+'?f='+str(args.framerate))
+    main(args.url+'?f='+str(args.framerate))

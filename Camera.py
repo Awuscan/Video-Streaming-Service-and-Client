@@ -19,7 +19,7 @@ class Camera(threading.Thread):
             if ret:
                 ret, buffer = cv2.imencode('.jpg', frame,self.__encode_param)
                 frame = buffer.tobytes()
-                self.__frame = frame
+                self.__frame = frame 
             else:
                 print("Can't read video stream\n")
                 break
