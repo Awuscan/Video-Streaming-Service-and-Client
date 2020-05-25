@@ -18,7 +18,7 @@ Default arguments: -w 640 -h 480 -q 50 -s 0 -p 80
 ```
 python streaming_client.py -u feed_url -f framerate
 ```
-Default arguments: -u http://localhost/video -f 30 
+Default arguments: -u http&#58;//localhost/video -f 30 
 
 ### Web client
 Open http&#58;//localhost/ or access direct feed at http&#58;//localhost/video?f=30 for 30fps stream.
