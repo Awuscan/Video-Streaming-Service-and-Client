@@ -8,7 +8,10 @@ cam = Camera.Camera()
 
 def get_frames(f):  
     while True:       
-            time.sleep(1/f) 
+            start = time.time()
+            diff = time.time() - start
+            while  diff < 1/f:
+                diff = time.time() - start 
             yield (b'--frame\r\nContent-Type: image/jpeg\r\n\r\n' + cam.getFrame() + b'\r\n' )             
 
 @app.route('/video')
