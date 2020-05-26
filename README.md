@@ -10,9 +10,8 @@ pip install flask
 ## Usage
 ### Server
 ```
-python streaming_server.py -w width -h height -q jpeg_quality -s source_index -p port
+python streaming_server.py -w width -h height -q jpeg_quality -f video_as_source_flag -s source -p port
 ```
-Default arguments: -w 640 -h 480 -q 50 -s 0 -p 80
 
 ### Dedicated client
 ```
